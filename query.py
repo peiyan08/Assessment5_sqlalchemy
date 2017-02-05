@@ -77,7 +77,10 @@ def get_model_info(year):
     """Takes in a year and prints out each model name, brand name, and brand
     headquarters for that year using only ONE database query."""
 
-    pass
+    models = db.session.query(Model.name, Brand.name,Brand.headquarters).filter(Model.year == year).all()
+
+    for model in models:
+        print "Model Name: " + str(model[0]) +" " + "Brand Name:" + str(model[1]) + " " + "Heaquarter:" + str(model[2])
 
 
 def get_brands_summary():

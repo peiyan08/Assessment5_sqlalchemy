@@ -26,7 +26,7 @@ class Brand(db.Model):
     def __repr__(self):
         """Provide helpful representation when printed"""
 
-        return "<Brand Name name=%s" % (self.name)
+        return "<Brand Name name=%s>" % (self.name)
 
 
 class Model(db.Model):
@@ -45,7 +45,7 @@ class Model(db.Model):
     def __repr__(self):
         """Provide helpful representation when printed"""
 
-        return "<Model Name:name=%s" % (self.name)
+        return "<Model Name:name=%s>" % (self.name)
 
 # End Part 1
 
